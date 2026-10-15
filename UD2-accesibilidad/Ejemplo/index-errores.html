@@ -7,15 +7,36 @@
   <title>EcoShop</title>
   <style>
     /* Estilos con poco contraste y sin manejo de foco */
+
+    *,*::after, *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root{
+      --bg-color: #a3e635;
+      font: 14px/1.6 Arial, sans-serif;
+    }
+
     body {
       background: #fdfdfd;
       color: #a0a0a0;
-      font-family: Arial, sans-serif;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .logo {
+      width: 150px;
     }
 
     /* Encabezado sin contraste adecuado */
     .header {
-      background: #a3e635;
+      background: var(--bg-color);
       padding: 15px;
       color: #ffffff;
     }
@@ -96,9 +117,11 @@
 
   <!-- FALLO 1: Sin enlace de salto (skip-link) -->
   <!-- FALLO 2: Encabezado maquetado con <div> en vez de <header> -->
-  <div class="header">
+  <header class="header">
     <!-- FALLO 3: Imagen del logo sin texto alternativo alt -->
+    <a class="logo" href="#" aria-label="Enlace a la pagina principal">
     <img src="img/logo.png" alt="logo">
+    
     <!-- FALLO 4: Menú de navegación sin etiqueta <nav> ni estructura de lista -->
     <div style="float: right;">
       <a href="#">Inicio</a>
@@ -106,7 +129,7 @@
       <a href="#">Nosotros</a>
       <a href="#">Contacto</a>
     </div>
-  </div>
+  </header>
 
   <!-- FALLO 5: Falta de jerarquía de encabezados (sin <h1>) -->
   <div style="clear: both; padding: 20px;">
@@ -115,7 +138,7 @@
     <!-- FALLO 6: Uso de <div> genérico para las tarjetas de producto -->
     <div class="product-box">
       <!-- FALLO 7: Atributo alt genérico que no aporta información -->
-      <img src="img/botella_acero.jpg" alt="botella_acero">
+      <img src="img/botella.jpg" alt="botella_acero">
       <h3>Botella Reutilizable</h3>
       <!-- FALLO 8: Contraste insuficiente en el precio (#ccc sobre #fff) -->
       <p class="price-tag">12,50 €</p>
@@ -126,7 +149,7 @@
 
 
     <div class="product-box">
-      <img src="img/bolsa_tela.jpg" alt="bolsa_tela">
+      <img src="img/bolsa.jpg" alt="bolsa_tela">
       <h3>Bolsa de tela reutilizable</h3>
       <p class="price-tag">8,99 €</p>
       <button class="btn-buy" onclick="alert('Añadido')">Añadir</button>
