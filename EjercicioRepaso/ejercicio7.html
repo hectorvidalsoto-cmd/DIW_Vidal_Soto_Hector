@@ -1,9 +1,3 @@
-<!--Ejercicio 7
-Confeccionar un formulario que solicite los datos personales de una persona y los datos del lugar
-donde trabaja, cada grupo de datos disponerlos agrupados con su correspondiente legend.
-Debes tener una campo para la fecha de nacimiento.
-Usa una lista con agrupación de de opciones para el país de nacimiento.-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,25 +10,25 @@ Usa una lista con agrupación de de opciones para el país de nacimiento.-->
         <fieldset>
             <legend>Datos Personales</legend>
             <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required><br><br>
+            <input type="text" id="name" name="name"><br><br>
 
             <label for="birthdate">Fecha de Nacimiento:</label>
-            <input type="date" id="birthdate" name="birthdate" required><br><br>
+            <input type="date" id="birthdate" name="birthdate"><br><br>
         </fieldset>
 
         <fieldset>
             <legend>Datos del Lugar donde Trabaja</legend>
             <label for="company">Nombre de la Empresa:</label>
-            <input type="text" id="company" name="company" required><br><br>
+            <input type="text" id="company" name="company"><br><br>
 
             <label for="country">País de Nacimiento:</label>
-            <select id="country" name="country" required>
+            <select id="country" name="country">
                 <option value="">Selecciona un país</option>
-                <option value="es">España</option>
-                <option value="mx">México</option>
-                <option value="ar">Argentina</option>
-                <option value="cl">Chile</option>
-                <option value="co">Colombia</option>
+                <option value="España">España</option>
+                <option value="México">México</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
             </select><br><br>
         </fieldset>
 
