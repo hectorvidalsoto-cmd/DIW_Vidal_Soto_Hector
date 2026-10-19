@@ -9,9 +9,97 @@
 
 <body>
     <h1>Horario</h1>
-    <table>
-        <td></td>
-    </table>
+    <table class="horario" border="1">
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th>Lúns</th>
+      <th>Martes</th>
+      <th>Mércores</th>
+      <th>Xoves</th>
+      <th>Venres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1ª + 2ª + 3ª hora: Lunes DIW unido (3 filas) -->
+    <tr>
+      <td class="hora">08:10-09:00</td>
+      <td class="num">1ª</td>
+      <td rowspan="3" class="diw">DIW</td>
+      <td rowspan="2" class="dwcc">DWCC</td>
+      <td rowspan="2" class="dwcs">DWCS</td>
+      <td rowspan="3" class="diw">DIW</td>
+      <td class="ing">ING</td>
+    </tr>
+    <tr>
+      <td class="hora">09:00-09:50</td>
+      <td class="num">2ª</td>
+      <td class="dwcc">DWCC</td>
+    </tr>
+    <tr>
+      <td class="hora">9:50-10:40</td>
+      <td class="num">3ª</td>
+      <td class="dwcs">DWCS</td>
+      <td class="dwcs">DWCS</td>
+      <td class="dwcc">DWCC</td>
+    </tr>
+
+    <!-- RECREO -->
+    <tr>
+      <td class="hora">10:40-10:55</td>
+      <td colspan="6" class="recreo">RECREO</td>
+    </tr>
+
+    <!-- 4ª + 5ª hora -->
+    <tr>
+      <td class="hora">10:55-11:45</td>
+      <td class="num">4ª</td>
+      <td rowspan="2" class="dwcc">DWCC</td>
+      <td rowspan="2" class="dwcs">DWCS</td>
+      <td rowspan="2" class="dwcc">DWCC</td>
+      <td rowspan="2" class="dwcs">DWCS</td>
+      <td rowspan="2" class="ipe">IPE II</td>
+    </tr>
+    <tr>
+      <td class="hora">11:45-12:35</td>
+      <td class="num">5ª</td>
+    </tr>
+
+    <!-- RECREO 2 -->
+    <tr>
+      <td class="hora">12:35-12:50</td>
+      <td colspan="6" class="recreo">RECREO</td>
+    </tr>
+
+    <!-- 6ª + 7ª hora -->
+    <tr>
+      <td class="hora">12:50-13:40</td>
+      <td class="num">6ª</td>
+      <td rowspan="2" class="dwcs">DWCS</td>
+      <td class="diw">DIW</td>
+      <td rowspan="2" class="daw">DAW</td>
+      <td class="daw">DAW</td>
+      <td rowspan="2" class="dwcs">DWCS</td>
+    </tr>
+    <tr>
+      <td class="hora">13:40-14:30</td>
+      <td class="num">7ª</td>
+      <td class="ing">ING</td>
+      <td class="dasp">DASP</td>
+    </tr>
+
+    <!-- 0ª hora -->
+    <tr>
+      <td class="hora">14:30-15:20</td>
+      <td class="num">0ª</td>
+      <td class="acp">ACP</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 </body>
 
 </html>

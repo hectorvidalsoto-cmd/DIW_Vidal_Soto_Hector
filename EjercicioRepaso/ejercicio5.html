@@ -1,0 +1,42 @@
+<!--Ejercicio 5
+Partiendo del ejercicio 1, añade tras el listado de lenguajes de programación un formulario que solicite el
+ingreso del nombre de una persona y 4 elementos de tipo checkbox para que seleccione los lenguajes de
+programación que conoce.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label>Lenguajes de programación que conoces:</label><br>
+        <input type="checkbox" id="python" name="languages" value="Python">
+        <label for="python">Python</label><br>
+
+        <input type="checkbox" id="javascript" name="languages" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+
+        <input type="checkbox" id="cpp" name="languages" value="C++">
+        <label for="cpp">C++</label><br>
+
+        <input type="checkbox" id="typescript" name="languages" value="TypeScript">
+        <label for="typescript">TypeScript</label><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <h1>Lista de lenguajes de programacion</h1>
+    <ul>
+        <li><a href="https://es.python.org/aprende-python/">Python</a></li>
+        <li><a href="https://lenguajejs.com/javascript/">JavaScript</a></li>
+        <li><a href="https://plataforma.josedomingo.org/pledin/cursos/curso_cpp1/curso/u03/">C++</a></li>
+        <li><a href="https://www.edx.org/es/aprende/lenguaje-typescript">TypeScript</a></li>
+        <li><a href="https://rust-lang.org/es/">Rust</a></li>
+    </ul>
+</body>
+</html>
