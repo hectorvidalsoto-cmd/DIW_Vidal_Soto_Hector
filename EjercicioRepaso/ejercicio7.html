@@ -1,38 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<!--especificamos el idioma español-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Indicamos un título para la página -->
+    <title>Formulario de empleados</title>
 </head>
+
 <body>
-    <form>
-        <fieldset>
-            <legend>Datos Personales</legend>
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name"><br><br>
-
-            <label for="birthdate">Fecha de Nacimiento:</label>
-            <input type="date" id="birthdate" name="birthdate"><br><br>
-        </fieldset>
-
-        <fieldset>
-            <legend>Datos del Lugar donde Trabaja</legend>
-            <label for="company">Nombre de la Empresa:</label>
-            <input type="text" id="company" name="company"><br><br>
-
-            <label for="country">País de Nacimiento:</label>
-            <select id="country" name="country">
-                <option value="">Selecciona un país</option>
-                <option value="España">España</option>
-                <option value="México">México</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Chile">Chile</option>
-                <option value="Colombia">Colombia</option>
-            </select>
-        </fieldset>
-
-        <button type="submit">Enviar</button>
-    </form>
+    <!-- falta el header con el h1 -->
+    <header>
+        <h1>Formulario de empleados</h1>
+    </header>
+    <!--metemos el contenido principal en un main-->
+    <main>
+        <form>
+            <!--añadimos un caption por accesibilidad -->
+            <caption>Formulario de empleados</caption>
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <!--agrupamos el label y el input en un p-->
+                <p>
+                    <label for="name">Nombre:</label>
+                    <!-- añadimos un placeholder para dar una pista al usuario -->
+                    <!-- añadimos un title para dar una pista al usuario  -->
+                    <input type="text" id="name" name="name" placeholder="María José"
+                        title="Introduce tu nombre de pila. Caracteres permitidos: letras y espacios, con tilde.">
+                </p>
+                <!--falta el campo de apellidos-->
+                <p>
+                    <label for="surname">Apellidos:</label>
+                    <input type="text" id="surname" name="surname" placeholder="García López"
+                        title="Introduce tus apellidos. Caracteres permitidos: letras y espacios, con tilde.">
+                </p>
+                <p>
+                    <label for="birthdate">Fecha de Nacimiento:</label>
+                    <!-- añadimos un title para dar una pista al usuario -->
+                    <!-- añadimos fecha máxima, hace 18 años, esto se haría con javascript pero nosotros lo ponemos para saber que atributos precisamos  -->
+                    <!-- añadimos fecha mínima, ejemplo hace 70 años-->
+                    <!-- añadimos un plaholder como ejempo del dato a pone, por si el navegador no lo soporta calendario-->
+                    <input type="date" id="birthdate" name="birthdate" title="Introduce tu fecha de nacimiento"
+                        max="2008-12-21" min="1953-12-21" placeholder="21/12/2005">
+                </p>
+                <!-- falta el campo de la dirección del empleado -->
+                <p>
+                    <label for="address">Dirección:</label>
+                    <!-- añadimos un tamaño para el campo para que sea un poco más grande que el resto, esto ya que no tenemos css-->
+                    <input type="text" id="address" name="address" placeholder="Calle Principal, 123" size="30"
+                        title="Introduce tu dirección completa.">
+                </p>
+                <!-- mediante una lista, select, añadimos el país de residencia -->
+                <p>
+                    <label for="residenceCountry">País de Residencia:</label>
+                    <select id="residenceCountry" name="residenceCountry">
+                        <option value="">Selecciona un país</option>
+                        <option value="España">España</option>
+                        <option value="México">México</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Colombia">Colombia</option>
+                    </select>
+            </fieldset>
+            <!--falta la información laboral: nombre de la empresa, puesto, sitio web, pais de residencia de la empresa  -->
+<fieldset>
+        <legend>Información laboral</legend>
+        <p>
+          <label for="empresa">Nombre de la empresa:</label>
+          <input type="text" name="empresa" id="empresa" placeholder="MiEmpresa S.L." size="20"
+            title="Nombre empresa. Caracteres con tildes">
+        </p>
+        <p>
+          <label for="url">Sitio Web:</label>
+          <input type="url" name="url" id="url" placeholder="http://miempresa.es" size="30" title="Url de la empresa">
+        </p>
+        <p>
+          <label for="puesto">Puesto de trabajo</label>
+          <select name="puesto" id="puesto">
+            <option value="0">Seleccione el puesto de trabajo</option>
+            <option value="1">Analista</option>
+            <option value="2">Diseñador</option>
+            <option value="3">Programador</option>
+            <option value="4">Tester</option>
+            <option value="5">Otros</option>
+          </select>
+        </p>
+        <p>
+          <label for="pais">Pais</label>
+          <select name="pais" id="pais">
+            <option value="1">Argentina</option>
+            <option value="2" selected>España</option>
+            <option value="3">México</option>
+            <option value="4">Guatemala</option>
+            <option value="5">Honduras</option>
+            <option value="7">El Salvador</option>
+            <option value="8">Venezuela</option>
+            <option value="9">Colombia</option>
+            <option value="10">Cuba</option>
+            <option value="11">Bolivia</option>
+            <option value="13">Perú</option>
+            <option value="14">Ecuador</option>
+            <option value="15">Paraguay</option>
+            <option value="16">Uruguay</option>
+            <option value="17">Chile</option>
+          </select>
+        </p>
+      </fieldset>
+      <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+      </p>
+        </form>
+    </main>
 </body>
+
 </html>

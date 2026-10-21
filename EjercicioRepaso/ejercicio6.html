@@ -1,48 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<!--especificamos el idioma español-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Indicamos un título para la página -->
+    <title>Ejercicio 6 - Lista de lenguajes de programación</title>
 </head>
+
 <body>
-    <form>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name"><br><br>
+    <!--metemos el h1 en un header-->
+    <header>
+        <h1>Ejercicio 6 - Lista de lenguajes de programación</h1>
+    </header>
+    <!--metemos el contenido principal en un main-->
+    <main>
+        <!--metemos cada cosa en una sección-->
+        <section>
+            <h2>Lista de lenguajes de programación</h2>
+            <ul>
+                <li>C</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>PHP</li>
+                <li>Ruby</li>
+                <li>Visual Basic</li>
+            </ul>
+        </section>
+        <!--metemos la lista desordenada en un section con un título
+        -->
+        <section>
+            <h2>Páginas interesantes sobre lenguajes de programación:</h2>
+            <ul>
+                <li><a href="https://es.python.org/aprende-python/">Python</a></li>
+                <li><a href="https://lenguajejs.com/javascript/">JavaScript</a></li>
+                <li><a href="https://plataforma.josedomingo.org/pledin/cursos/curso_cpp1/curso/u03/">C++</a></li>
+                <li><a href="https://www.edx.org/es/aprende/lenguaje-typescript">TypeScript</a></li>
+                <li><a href="https://rust-lang.org/es/">Rust</a></li>
+            </ul>
+        </section>
+        <section>
+            <!--añadimos un título-->
+            <h2>Formulario de lenguajes de programación</h2>
 
-        <label>Lenguajes de programación que conoces:</label><br>
-        <input type="checkbox" id="python" name="languages">
-        <label for="python">Python</label><br>
-
-        <input type="checkbox" id="javascript" name="languages">
-        <label for="javascript">JavaScript</label><br>
-
-        <input type="checkbox" id="cpp" name="languages">
-        <label for="C">C++</label><br>
-
-        <input type="checkbox" id="typescript" name="languages">
-        <label for="typescript">TypeScript</label><br>
-
-        <button type="submit">Enviar</button>
-    </form>
-    <h1>Lista de lenguajes de programacion</h1>
-    <ul>
-        <li><a href="https://es.python.org/aprende-python/">Python</a></li>
-        <li><a href="https://lenguajejs.com/javascript/">JavaScript</a></li>
-        <li><a href="https://plataforma.josedomingo.org/pledin/cursos/curso_cpp1/curso/u03/">C++</a></li>
-        <li><a href="https://www.edx.org/es/aprende/lenguaje-typescript">TypeScript</a></li>
-        <li><a href="https://rust-lang.org/es/">Rust</a></li>
-    </ul>
-    <form>
-        <label for="editor">Editor de código preferido:</label>
-        <select id="editor" name="editor">
-            <option value="vscode">Visual Studio Code</option>
-            <option value="sublime">Sublime Text</option>
-            <option value="notepad++">notepad++</option>
-            <option value="vim">Vim</option>
-            <option value="emacs">Emacs</option>
-        </select><br><br>
-
-        <button type="submit">Enviar</button>
+            <form>
+                <!-- añadimos un caption por accesibilidad -->
+                <caption>Formulario de lenguajes de programación</caption>
+                <!--agrupamos el label y el input en un p-->
+                <p>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+                </p>
+                <!-- este texto describe el propósito del grupo de checkboxes y no es un label lo metemos en un p -->
+                <p><strong>Lenguajes de programación que conoces:</strong></p>
+                <p>
+                    <input type="checkbox" id="python" name="languages">
+                    <label for="python">Python</label><br>
+                    <input type="checkbox" id="javascript" name="languages">
+                    <label for="javascript" checked>JavaScript</label><br>
+                    <!--es aconsejable, en los formularios, marcar uno por defecto -->
+                    <input type="checkbox" id="cpp" name="languages">
+                    <label for="c++">C++</label><br>
+                    <input type="checkbox" id="typescript" name="languages">
+                    <label for="typescript">TypeScript</label>
+                </p>
+                <!-- se pedía el uso de un radio-->
+                <p><strong>¿Cuál es tu editor de código preferido?</strong></p>
+                <ul>
+                    <li><input type="radio" name="editor" id="nb"><label for="nb">NetBeans</label></li>
+                    <li><input type="radio" name="editor" id="note"><label for="note">Notepad++</label></li>
+                    <li><input type="radio" name="editor" id="sb"><label for="sb">Sublime Text</label></li>
+                    <li><input type="radio" name="editor" id="vsc"><label for="vsc">Visual Studio Code</label></li>
+                </ul>
+                <!--Es bueno, en los formularios, añadir un botón de limpiar el formulario-->
+                <p>
+                    <button type="reset">Limpiar</button>
+                    <button type="submit">Enviar</button>
+                </p>
+            </form>
+        </section>
+    </main>
 </body>
+
 </html>

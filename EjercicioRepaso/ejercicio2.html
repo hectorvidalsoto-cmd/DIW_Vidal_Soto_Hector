@@ -1,99 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<!--especificamos el idioma español-->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Indicamos un título para la página -->
+  <title>Horario de clases</title>
 </head>
 
 <body>
-    <h1>Horario</h1>
-    <table class="horario" border="1">
-  <thead>
-    <tr>
-      <th colspan="2"></th>
-      <th>Lúns</th>
-      <th>Martes</th>
-      <th>Mércores</th>
-      <th>Xoves</th>
-      <th>Venres</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>08:10-09:00</td>
-      <td>1ª</td>
-      <td rowspan="3">DIW</td>
-      <td rowspan="2">DWCC</td>
-      <td rowspan="2">DWCS</td>
-      <td rowspan="3">DIW</td>
-      <td>ING</td>
-    </tr>
-    <tr>
-      <td>09:00-09:50</td>
-      <td>2ª</td>
-      <td>DWCC</td>
-    </tr>
-    <tr>
-      <td>9:50-10:40</td>
-      <td>3ª</td>
-      <td>DWCS</td>
-      <td>DWCS</td>
-      <td>DWCC</td>
-    </tr>
+  <!--metemos el h1 en un header-->
+  <header></header>
+  <h1>Horario de clases</h1>
+  </header>
+  <!--metemos el contenido principal en un main-->
+  <main>
 
-    <tr>
-      <td>10:40-10:55</td>
-      <td colspan="6">RECREO</td>
-    </tr>
+    <table class="horario" border="1" style="border-collapse: collapse;">
+      <!-- establecemos el caption por accesibilidad -->
+      <caption>Horario de clases</caption>
+      <thead>
+        <tr>
+          <th colspan="2"></th>
+          <th>Lúns</th>
+          <th>Martes</th>
+          <th>Mércores</th>
+          <th>Xoves</th>
+          <th>Venres</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>08:10-09:00</td>
+          <td>1ª</td>
+          <td rowspan="3">DIW</td>
+          <td rowspan="2">DWCC</td>
+          <td rowspan="2">DWCS</td>
+          <td rowspan="3">DIW</td>
+          <td>ING</td>
+        </tr>
+        <tr>
+          <td>09:00-09:50</td>
+          <td>2ª</td>
+          <td>DWCC</td>
+        </tr>
+        <tr>
+          <td>9:50-10:40</td>
+          <td>3ª</td>
+          <td>DWCS</td>
+          <td>DWCS</td>
+          <td>DWCC</td>
+        </tr>
 
-    <tr>
-      <td>10:55-11:45</td>
-      <td>4ª</td>
-      <td rowspan="2">DWCC</td>
-      <td rowspan="2">DWCS</td>
-      <td rowspan="2">DWCC</td>
-      <td rowspan="2">DWCS</td>
-      <td rowspan="2">IPE II</td>
-    </tr>
-    <tr>
-      <td>11:45-12:35</td>
-      <td>5ª</td>
-    </tr>
+        <tr>
+          <td>10:40-10:55</td>
+          <td colspan="6">RECREO</td>
+        </tr>
 
-    <tr>
-      <td>12:35-12:50</td>
-      <td colspan="6">RECREO</td>
-    </tr>
+        <tr>
+          <td>10:55-11:45</td>
+          <td>4ª</td>
+          <td rowspan="2">DWCC</td>
+          <td rowspan="2">DWCS</td>
+          <td rowspan="2">DWCC</td>
+          <td rowspan="2">DWCS</td>
+          <td rowspan="2">IPE II</td>
+        </tr>
+        <tr>
+          <td>11:45-12:35</td>
+          <td>5ª</td>
+        </tr>
 
-    <tr>
-      <td>12:50-13:40</td>
-      <td>6ª</td>
-      <td rowspan="2">DWCS</td>
-      <td>DIW</td>
-      <td rowspan="2">DAW</td>
-      <td>DAW</td>
-      <td rowspan="2">DWCS</td>
-    </tr>
-    <tr>
-      <td>13:40-14:30</td>
-      <td>7ª</td>
-      <td>ING</td>
-      <td>DASP</td>
-    </tr>
+        <tr>
+          <td>12:35-12:50</td>
+          <td colspan="6">RECREO</td>
+        </tr>
 
-    <tr>
-      <td>14:30-15:20</td>
-      <td>0ª</td>
-      <td>ACP</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+        <tr>
+          <td>12:50-13:40</td>
+          <td>6ª</td>
+          <td rowspan="2">DWCS</td>
+          <td>DIW</td>
+          <td rowspan="2">DAW</td>
+          <td>DAW</td>
+          <td rowspan="2">DWCS</td>
+        </tr>
+        <tr>
+          <td>13:40-14:30</td>
+          <td>7ª</td>
+          <td>ING</td>
+          <td>DASP</td>
+        </tr>
+
+        <tr>
+          <td>14:30-15:20</td>
+          <td>0ª</td>
+          <td>ACP</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
 </body>
 
 </html>
