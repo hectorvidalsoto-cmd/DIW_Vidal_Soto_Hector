@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--falta idioma de la página-->
+<html lang="es">
+
+<head>
+  <!-- faltan el meta del tipo de caracteres-->
+  <meta charset="UTF-8">
+  <!-- falta el meta para poder escalar la página-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1.1 - Sin Corregir</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <!-- el logo siempre es un enlace a la página principal-->
+    <a href="Ejercicio1.html">
+      <!-- Cuando es un logo, alt tiene que tener el contenido del mismo o
+       en caso de tener el h1 con el mismo contenido pondresmo "enlace a la página principal"-->
+      <img src="./image/LogoEstudio.png" class="logo" alt="Enlace a la página principal">
+    </a>
+    <h1>Estudios Shonos</h1>
+  </header>
+  <main class="main">
+    <h2>Cursos más demandados</h2>
+    <!-- podemos indicar con aria-label que las cards son el catálogo de cursos-->
+    <ul class="card-container" aria-label="Catálogo de Cursos">
+      <li class="card">
+        <!-- metemos la imagen en un figure, esto no es por accesibilidad es para maquetar 
+         Alt, al ser una imagen decorativa NO tiene que tener contenido-->
+        <figure>
+          <img src="image/curso-web.jpeg" alt="">
+        </figure>
+        <div class="card-body">
+          <h4>Curso de Accesibilidad</h4>
+          <p>Aprende a maquetar sitios web inclusivos desde cero siguiendo las pautas WCAG 2.1.</p>
+          <a href="#" class="btn-more">Saber más <span class="sr-only">sobre el curso de Accesibilidad</span></a>
+        </div>
+      </li>
+
+      <li class="card">
+        <!-- metemos la imagen en un figure, esto no es por accesibilidad es para maquetar 
+               Alt, al ser una imagen decorativa NO tiene que tener contenido-->
+        <figure>
+          <img src="image/curso-css.jpeg" alt="">
+        </figure>
+        <div style="font-weight: bold; font-size: 18px;">Curso de CSS Avanzado</div>
+        <p>Domina CSS Grid, Flexbox, variables CSS y animaciones fluidas para web.</p>
+        <a href="#" class="btn-more">Saber más <span class="sr-only">sobre el curso de CSS avanzado</span></a>
+      </li>
+    </ul>
+  </main>
+
+</body>
+
+</html>

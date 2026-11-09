@@ -1,0 +1,136 @@
+<!doctype html>
+<!--falta idioma de la página-->
+<html lang="es">
+<head>
+  <!-- faltan el meta del tipo de caracteres-->
+  <meta charset="UTF-8">
+  <!-- falta el meta para poder escalar la página-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetShop Express - Tu tienda de mascotas</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Enlace al contenido principal-->
+  <a class="sr-only" href="#contenido-principal">
+    Saltar al contenido principal
+  </a>
+
+  <!-- Encabezado de la página -->
+  <header class="header">
+    <!-- El logo es siempre un enlace a la página principal, este es un criterio 
+         de accesibilidad como de usabilidad-->
+    <a class="logo" href="#">
+      <img src="./image/LogoMascotas.png" class="logo-img" alt="Mascotas">
+    </a>
+    <nav class="nav" aria-label="Menú principal">
+      <ul>
+        <li><a href="#" class="activa">Inicio</a></li>
+        <li><a href="#">Perros</a></li>
+        <li><a href="#">Gatos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner principal / Hero -->
+  <!-- es publicidad por lo tanto es un aside-->
+  <aside class="hero" aria-label="banner-title">
+    <h2 id="banner-title">¡Super Ofertas de Primavera!</h2>
+    <p>Aprovecha hasta un 50% de descuento en piensos seleccionados.</p>
+    <a href="#" class="btn-buy">Ver catálogo de ofertas</a>
+  </aside>
+
+  <!-- Contenido principal -->
+  <!-- sin el id el enlace de arriba no sirve de nada-->
+  <main class="main-content" id="contenido-principal">
+    <section aria-labelledby="sec-productos">
+      <h2 id="sec-productos">Productos Destacados</h2>
+      <ul class="product-grid">
+        <!-- Producto 1 -->
+        <li class="card">
+          <!-- metemos, por maquetación, las imágenes en un figure.
+                    ESTA ES UNA IMAGEN DECORATIVA POR LO TANTO ALT ESTÁ VACIO-->
+          <figure class="card-img">
+            <img src="./image/pienso-perro.jpg" alt="">
+          </figure>
+          <h3>Pienso Premium Perro</h3>
+          <h4 class="price">
+            35,99 € <span class="badge-promo">¡Solo hoy en rojo!</span>
+          </h4>
+          <p>Nutrición completa para perros adultos.</p>
+          <button type="button" class="btn-buy" onclick="alert('Añadido')">
+            Comprar <span class="sr-only">Pienso Premium Perro</span>
+          </button>
+        </li>
+
+        <!-- Producto 2 -->
+        <li class="card">
+          <img class="card-img" src="./image/rarcador_gato.jpg"
+            alt="Rascador para gatos con tres niveles y juguete bola">
+          <h3>Rascador Árbol Gato</h3>
+          <h4 class="price">24,50 €</h4>
+          <p>Rascador con tres niveles y juguete de bola.</p>
+          <button type="button" class="btn-buy" onclick="alert('Añadido')">
+            Comprar <span class="sr-only">Rascador árbol gato/span>
+          </button>
+        </li>
+
+        <!-- Producto 3 -->
+        <li class="card">
+          <figure class="card-img">
+            <img src="./image/comedero.jpg" alt="">
+          </figure>
+          <h3 class="titulo">
+            Comedero Acero Inox
+          </h3>
+          <h4 class="price">8,99 €</h4>
+          <p>Antideslizante y lavable en lavavajillas.</p>
+          <button type="button" class="btn-buy" onclick="alert('Añadido')">
+            Comprar <span class="sr-only">comedero acero inox</span>
+          </button>
+        </li>
+        </li>
+      </ul>
+    </section>
+    <!-- Sección Newsletter -->
+    <section class="newsletter-section" aria-labelledby="sec-newsletter">
+      <h2 id="sec-newsletter">Suscríbete a nuestro boletín</h2>
+      <p class="desc">Recibe ofertas exclusivas en tu correo electrónico.</p>
+      <form id="newsForm">
+        <p>
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="marina@gmail.com" required
+            aria-describedby="emailError">
+          <span class="error-text" id="emailError" role="alert">
+            Error: Ingrese una dirección de correo válida.
+          </span>
+        </p>
+        <button type="button" class="btn-buy">Suscribirme</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2026 PetShop Express. Todos los derechos reservados.</p>
+    <p>
+      Consulte nuestra <a href="politica.html">política de envíos y devoluciones</a>.
+    </p>
+    <ul class="redes">
+      <li>
+        <a href="" class="icono">
+          <!-- falta el alt-->
+          <img src="./image/facebook.png" alt="Enlace a la página de facebook de mascotas">
+        </a>
+      </li>
+      <li>
+        <a href="" class="icono">
+          <img src="./image/instagram.png" alt="Enlace a la página de instagram de mascotas">
+        </a>
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>
