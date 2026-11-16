@@ -128,10 +128,9 @@ section {
 .grid-line-names .item:nth-child(3) {
   background-color: cyan;
   grid-row: line-r3 / line-r4;
-  grid-column:  line-c3 / line-c4;
+  grid-column: line-c3 / line-c4;
   grid-area: line-r3 / line-c3 / line-r4 / line-c4;
 }
-
 
 /* Grid areas */
 
@@ -140,17 +139,17 @@ section {
   /* 3cx3r */
   grid-template-columns: 1fr 200px;
   grid-template-rows: 100px 1fr 60px;
-  grid-template-areas: 
-  "header header" 
-  "content sidebar"
-  "footer footer";
+  grid-template-areas:
+    "header header"
+    "content sidebar"
+    "footer footer";
 
   grid-template-rows: 100px repeat(2, 1fr) 60px;
-  grid-template-areas: 
-  "header header" 
-  "content sidebar"
-  "content ."
-  "footer footer";
+  grid-template-areas:
+    "header header"
+    "content sidebar"
+    "content ."
+    "footer footer";
 }
 
 .header {
@@ -173,7 +172,6 @@ section {
   background-color: darkcyan;
 }
 
-
 /* Estilos del grid Implicito */
 
 .grid-implicit {
@@ -186,7 +184,6 @@ section {
 
   grid-template-rows: repeat(3, 200px);
 }
-
 
 /* Flujos del grid */
 
@@ -214,6 +211,7 @@ section {
 }
 
 /* Flujo denso de la Grid */
+
 .grid-flow-dense {
   display: grid;
   /* 5cx3r */
@@ -272,7 +270,6 @@ section {
   opacity: 75%;
 }
 
-
 /* Cambiar el orden normal de Grid Items */
 
 .grid-order {
@@ -293,7 +290,6 @@ section {
 .grid-order .item:nth-child(5) {
   order: -1;
 }
-
 
 /* Alineamiento de Grid Items */
 
@@ -317,12 +313,74 @@ section {
   align-self: start;
 }
 
-
 /* alineamiento de Grid Tracks (bloques) */
 
-.grid-align {
+.grid-align-tracks {
   display: grid;
   /* 3cx2r */
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: repeat(2, 200px);
+
+  justify-content: start;
+  justify-content: end;
+  justify-content: center;
+  justify-content: stretch;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+
+  align-content: stretch;
+  align-content: start;
+  align-content: center;
+  align-content: space-between;
+  align-content: space-around;
+  align-content: space-evenly;
+}
+
+/* Definimos tamaño mínimo y máximo de los items */
+
+.grid-min-max {
+  display: grid;
+  /* 4cx?r */
+  grid-template-columns: repeat(4, minmax(100px, 200px));
+  grid-template-columns: repeat(4, minmax(min-content, 200px));
+  grid-template-columns: repeat(4, minmax(100px, min-content));
+  grid-template-columns: repeat(4, minmax(100px, max-content));
+  grid-template-columns: repeat(4, minmax(max-content, 200px));
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+}
+
+/* patrones repetititvos */
+
+.grid-repeat {
+  display: grid;
+  /* 4cx?r */
+  grid-template-columns: repeat(4, 10% 20% 30% 40%);
+  grid-template-columns: repeat(2, 10% 20% 30% 40%);
+  grid-template-columns: repeat(1, 10% 20% 30% 40%);
+  /* 4cx4r */
+  grid-template-columns: repeat(2, 100px 200px);
+  grid-auto-rows: 150px;
+}
+
+/* Estilos de la grid dinámicos */
+
+.grid-dynamics {
+  display: grid;
+  /* 4cx?r */
+  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(auto-fill, 100px);
+  /* justify-content: center; */
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+}
+
+/* Estilos para diseño responsive sin Media Queries */
+
+.grid-responsive{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(auto,300px));
+  justify-content: center;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
 }
