@@ -23,28 +23,38 @@
     --fuente-cuerpo: 'Lato', Georgia, 'Times New Roman', Times, serif;
     --fuente-titulos: 'Arvo', Verdana, Geneva, Tahoma, sans-serif;
     --color-texto: #38271e;
+    --color-texto-secundario: #76675b;
     --color-secundario: #633b25;
     --color-texto-cabecera: #fff8ed;
     --color-sobretitulos: #b65b2c;
     --bg-color: #f4ede2;
     --bg-cabecera-pie: #37271e;
     --bg-panel: #fffdf9;
+    --sobretitulo: #ffd79a;
+    --linea-enlaces-menu: #ffd18a;
+    --fondo-lendas: #ead9c3;
+    --fondo-inputs: #ffffff;
+    --borde-inputs: #b9aa9b;
+    --contorno-focus: #a65d2b;
+    --fondo-focus: wheat;
+    --valid: #39834b;
+    --invalid: #bd4035;
+
     font: 14px/1.6 var(--fuente-cuerpo);
     color: var(--color-texto);
 }
 
 body {
     min-height: 100vh;
-    width: min(1120px,92%);
+    max-width: 100vw;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2, auto) 1fr auto;
     grid-template-areas: 
         "cabecera cabecera"
         "menu menu"
         "contenido contenido"
         "pie pie";
-    gap: 1.8rem;
 }
 
 img {
@@ -58,9 +68,27 @@ img {
 
 .cabecera {
     grid-area: cabecera;
+    background-color: var(--bg-cabecera-pie);
+    width: 100%;
+    color: var(--color-texto-cabecera);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.header-logo {
+    display: flex;
+    flex-direction: column;
+}
 
+.sobretitulo {
+    color: var(--sobretitulo);
+}
+
+.logo{
+    width: 150px;
+    display: inline-block;
+}
 /*=====  End of Estilos de la cabecera  ======*/
 
 
@@ -70,6 +98,38 @@ img {
 
 .menu{
     grid-area: menu;
+    background-color: var(--color-secundario);
+    padding: 1rem;
+}
+
+.menu a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    transition: all .5s ease-out;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    border-radius: 10%;
+    background-color: transparent;
+}
+
+.menu a:hover::after{
+    width: 100%;
+    background-color: var(--linea-enlaces-menu);
 }
 
 
@@ -81,6 +141,46 @@ img {
 
 .contenido {
     grid-area: contenido;
+    background-color: var(--bg-color);
+}
+
+h2, h3 {
+    color: var(--color-secundario);
+}
+
+.etiqueta{
+   color: var(--color-sobretitulos);
+}
+
+figcaption {
+    color: var(--borde-inputs)
+}
+
+.panel, .card {
+    background-color: var(--bg-panel);
+}
+
+.lendas {
+    background-color: var(--fondo-lendas);
+}
+
+form > input{
+    background-color: var(--fondo-inputs);
+}
+
+form>input:focus {
+    background-color: var(--contorno-focus);
+}
+
+form>input:valid {
+    background-color: var(--valid);
+}
+
+form>input:invalid {
+    background-color: var(--invalid);
+}
+button {
+    background-color: var(--color-secundario);
 }
 
 
@@ -92,7 +192,8 @@ img {
 =============================================*/
 
 .pie {
-    grid-area: menu;
+    grid-area: pie;
+    background-color: var(--bg-cabecera-pie);
 }
 
 /*=====  End of Estilos del pie  ======*/
