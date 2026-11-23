@@ -1,5 +1,14 @@
 @import url(normalize.css);
 
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
 *,
 *::after,
 *::before {
@@ -52,10 +61,6 @@ nav {
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-}
-
 nav li {
     font-size: 1.5rem;
 }
@@ -68,7 +73,6 @@ a {
 nav a:hover {
     background-color: #a9a9a9;
     color: white;
-    text-decoration: none;
 }
 
 #content {
@@ -82,7 +86,6 @@ section ul {
 }
 
 section a:hover {
-    text-decoration: none;
     background-color: black;
     color: white;
 }
