@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.portada {
+    background-color: #c6c6c6;
+    background: url(../img/artico.jpg) no-repeat;
+    background-size: cover;
+}
+
+.portada section {
+    max-width: 60%;
+}
+
+.portada h2 {
+    color: #d7192d;
+    outline: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.portada h3 {
+    font-family: Roboto;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.portada button {
+    padding: 1rem;
+    background-color: #d7192de6;
+    border: none;
+    width: 160px;
+}

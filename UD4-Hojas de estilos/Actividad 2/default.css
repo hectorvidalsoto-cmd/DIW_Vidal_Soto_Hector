@@ -1,0 +1,95 @@
+@import url(normalize.css);
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #a9a9a9;
+    color: white;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header h2 {
+    font-size: 1rem;
+}
+
+p,
+li {
+    font-size: 0.8rem;
+}
+
+main {
+    flex: 1;
+}
+
+nav {
+    float: left;
+    /* height: 100%; */
+    width: clamp(200px, 30%, 300px);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+}
+
+
+nav a:hover {
+    background-color: #a9a9a9;
+    color: white;
+    text-decoration: none;
+}
+
+#content {
+    float: left;
+    width: clamp(800px, 30%, 1400px);
+    /* height: 100%; */
+}
+
+section ul {
+    list-style: circle;
+}
+
+section a:hover {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+
+footer {
+    clear: both;
+    background-color: #a9a9a9;
+    color: white;
+}
