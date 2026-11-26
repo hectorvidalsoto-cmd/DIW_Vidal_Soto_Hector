@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-texto: #333;
+}
+
+header {
+    background-color: #d9d9d9;
+    padding: 10px 20px;
+    border-bottom: 1px solid #bbb;
+}
+
+header h1 {
+    color: var(--color-texto);
+    font-size: 1.8em;
+}
+
+header h2 {
+    color: var(--color-texto);
+    font-weight: normal;
+}
+
+nav {
+    float: left;
+    width: 15%;
+    margin: 0.5em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #888888;
+    background-color: #f2f2f2;
+}
+
+#content {
+    float: left;
+    width: 80%;
+    overflow: hidden;
+}
+
+#left {
+    float: left;
+    width: 49%;
+}
+
+#right {
+    float: left;
+    width: 49%;
+}
+
+#left > p:first-of-type,
+#right > p:first-of-type {
+    font-weight: bold;
+}
+
+aside {
+    float: right;
+    width: 18%;
+    margin-top: 1em;
+    padding: 10px;
+    background-color: rgba(220, 220, 220, 0.425);
+    line-height: 1.5em;
+    border-radius: 5px;
+}
+
+footer {
+    clear: both;
+    background-color: #d9d9d9;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #bbb;
+    font-size: 0.9rem;
+    color: var(--color-texto);
+}
